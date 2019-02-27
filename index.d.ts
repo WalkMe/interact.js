@@ -94,6 +94,7 @@ declare namespace interact {
     onmove?: Listener
     oninertiastart?: Listener
     onend?: Listener
+    enabled?: boolean
   }
 
   interface ResizableOptions {
@@ -116,6 +117,12 @@ declare namespace interact {
     onmove?: Listener
     oninertiastart?: Listener
     onend?: Listener
+
+    preserveAspectRatio?: any
+    restrictEdges?: any
+    restrictSize?: any
+    margin?: any
+    enabled: boolean
   }
 
   interface GesturableOptions {
@@ -274,6 +281,7 @@ declare namespace interact {
     styleCursor ( yesno: boolean ) : Interactable
     createSnapGrid ( opt: { x: number, y: number, range: number, offset: Position } ) : SnapFunction
     test ( x : SnapFunction )
+    preventDefault(string) : any
   }
 
   interface InteractOptions {
